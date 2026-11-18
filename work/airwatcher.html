@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AirWatcher | Hanna Magnusson</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700&family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="../index.html" class="logo">Hanna Magnusson</a>
+    <div class="header-meta">
+      <span>Software Engineer</span>
+      <span>Gothenburg, SE</span>
+      <span data-clock>00:00</span>
+    </div>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">Menu</button>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="../portfolio.html" class="active">Portfolio</a></li>
+        <li><a href="../contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="section">
+  <div class="wrap">
+
+    <a href="../portfolio.html" class="text-link">← Back to projects</a>
+
+    <div class="section-head" style="margin-top: 32px;">
+      <span class="eyebrow">01 / Case study</span>
+      <h2>AirWatcher</h2>
+      <p>An air quality monitoring and analysis system developed in C++ during my exchange semester at INSA Lyon, with a focus on algorithms, software architecture, security and sensor reliability.</p>
+    </div>
+
+
+  <figure class="case-banner reveal">
+    <img src="../assets/airwatcher-banner.png" alt="AirWatcher — air quality monitoring system" class="shot" data-full="../assets/airwatcher-banner.png" data-caption="AirWatcher — Air Quality Monitoring System">
+  </figure>
+
+    <div class="project-tags" style="margin-bottom: 36px;">
+      <span>C++</span>
+      <span>Algorithms</span>
+      <span>Software Architecture</span>
+      <span>Data Analysis</span>
+      <span>Security</span>
+    </div>
+
+    <div class="card reveal">
+      <h3>About the group project</h3>
+      <p>AirWatcher is a C++ console application developed to monitor and analyze air quality using data collected from sensors distributed across a geographical area.</p>
+      <p>The system can calculate average air quality within an area, estimate air quality at a specific location, compare sensors and detect unreliable sensor data.</p>
+      <p>The project was developed during my exchange semester at INSA Lyon and gave us the opportunity to work with a larger software system involving algorithms, architecture, data management, security and performance.</p>
+    </div>
+
+    <div class="two-col reveal" style="margin: 36px 0;">
+      <figure class="shot-frame"><img class="shot" src="../assets/airwatcher-algorithms.png" alt="AirWatcher console application" data-full="../assets/airwatcher-algorithms.png" data-caption="AirWatcher console application"><figcaption class="shot-zoom" aria-hidden="true"><span>View</span></figcaption></figure>
+      <figure class="shot-frame"><img class="shot" src="../assets/airwatcher-architecture.png" alt="AirWatcher system architecture" data-full="../assets/airwatcher-architecture.png" data-caption="AirWatcher system architecture"><figcaption class="shot-zoom" aria-hidden="true"><span>View</span></figcaption></figure>
+    </div>
+
+    <div class="card reveal">
+      <h3>Core functionality</h3>
+      <p>AirWatcher provides several tools for analyzing air quality measurements collected from different sensors.</p>
+      <p>Users can calculate mean air quality for a selected area and time period, estimate air quality at a location without a sensor, and compare sensors based on their measurements.</p>
+      <p>Administrators also have access to sensor reliability analysis, allowing suspicious or unreliable sensor data to be identified and excluded from future calculations.</p>
+    </div>
+
+    <div class="card reveal">
+      <h3>Software architecture</h3>
+      <p>AirWatcher uses a layered architecture that separates the console interface, application logic and data access.</p>
+      <p>The presentation layer handles authentication, role-based menus, user input and displaying results. The application layer contains the main algorithms and services used for air quality analysis.</p>
+      <p>A separate data access layer handles CSV files containing sensors, measurements, users and other system data. This separation improves modularity, maintainability and testability while preventing users from accessing the underlying files directly.</p>
+    </div>
+
+    <div class="card reveal">
+      <h3>Algorithms</h3>
+      <p>Several algorithms were implemented for processing and analysing the sensor data.</p>
+      <p>Mean air quality calculations filter sensor measurements based on location and time before calculating average pollutant values. Spatial estimation is used when air quality needs to be estimated at a position where no sensor is available.</p>
+      <p>The system also includes functionality for ranking sensors by similarity and analysing whether individual sensors are producing reliable measurements.</p>
+    </div>
+
+    <div class="card reveal">
+      <h3>What I learned</h3>
+      <p>AirWatcher gave me experience designing and implementing a larger C++ software system rather than focusing on a single isolated algorithm.</p>
+      <p>The project combined software architecture, algorithms, data handling, performance evaluation and security considerations. It also showed how architectural decisions can make a system easier to maintain, test and extend.</p>
+    </div>
+
+  </div>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>© 2026 Hanna Magnusson</p>
+    <div class="footer-links">
+      <a href="https://www.linkedin.com/in/hanna-magnusson-28787324a" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="mailto:hanna012008@hotmail.com">Email</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../script.js"></script>
+</body>
+</html>

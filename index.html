@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hanna Magnusson — Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700&family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="booted">
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="index.html" class="logo">Hanna Magnusson</a>
+    <div class="header-meta">
+      <span>Software Engineer</span>
+      <span>Gothenburg, SE</span>
+      <span data-clock>00:00</span>
+    </div>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">Menu</button>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- ============ DESK HERO ============ -->
+  <section class="hero desk-hero">
+    <div class="desk-scene" id="deskScene">
+      <div class="desk-stage">
+        <div class="desk-wall" aria-hidden="true"></div>
+        <div class="desk-top" aria-hidden="true"></div>
+
+        <!-- wall: photo + post-its -->
+        <figure class="item frame drag" style="--r:-3deg;">
+          <img src="assets/hannaM.jpg" alt="Hanna" draggable="false">
+          <figcaption>hanna · 2026</figcaption>
+          <span class="tape"></span>
+        </figure>
+        <div class="item postit pink p1 drag" style="--r:-4deg;">MSc CS<br>Chalmers, 2027</div>
+        <div class="item postit mint p2 drag" style="--r:3deg;">Exchange year<br>at INSA Lyon</div>
+        <div class="item postit yellow p3 drag" style="--r:-2deg;">Open to jobs<br>&amp; internships</div>
+
+        <!-- lamp -->
+        <div class="item lamp drag tap" data-action="lamp" style="--r:0deg;" aria-label="Lamp: click to turn on or off">
+          <span class="lamp-cone"></span>
+          <svg viewBox="0 0 120 200" aria-hidden="true">
+            <ellipse cx="46" cy="190" rx="38" ry="8" fill="#3a3340"/>
+            <rect x="30" y="176" width="32" height="14" rx="4" fill="#4a4252"/>
+            <path d="M46 176 L46 104 L88 44" stroke="#d6d2dc" stroke-width="7" stroke-linecap="round" fill="none"/>
+            <circle cx="46" cy="104" r="7" fill="#9a94a6"/>
+            <path d="M70 28 L112 52 L94 84 L56 62 Z" fill="#FF3D80"/>
+            <ellipse cx="86" cy="72" rx="10" ry="7" class="lamp-bulb"/>
+          </svg>
+          <span class="lamp-tip">tap the lamp</span>
+        </div>
+
+        <!-- plant: water it with the can -->
+        <div class="item plant drag tap" data-action="plant" data-stage="0" style="--r:0deg;">
+          <svg viewBox="0 0 120 220" aria-hidden="true" overflow="visible">
+            <g class="plant-grow">
+              <path d="M60 190 C 58 150, 62 110, 60 70" stroke="#49A55D" stroke-width="6" stroke-linecap="round" fill="none"/>
+              <path d="M60 150 C 30 150, 22 126, 28 112 C 46 114, 58 130, 60 150 Z" fill="#6FCB80"/>
+              <path d="M60 128 C 90 126, 98 104, 92 90 C 74 92, 62 108, 60 128 Z" fill="#8BE29B"/>
+              <g class="bloom">
+                <g transform="translate(60 62)">
+                  <circle r="9" fill="#FFD84D"/>
+                  <g fill="#FF3D80">
+                    <ellipse cx="0" cy="-19" rx="9" ry="13"/><ellipse cx="0" cy="19" rx="9" ry="13"/>
+                    <ellipse cx="-19" cy="0" rx="13" ry="9"/><ellipse cx="19" cy="0" rx="13" ry="9"/>
+                    <ellipse cx="-14" cy="-14" rx="9" ry="12" transform="rotate(-45 -14 -14)" fill="#FF8AB8"/>
+                    <ellipse cx="14" cy="-14" rx="9" ry="12" transform="rotate(45 14 -14)" fill="#FF8AB8"/>
+                    <ellipse cx="-14" cy="14" rx="9" ry="12" transform="rotate(45 -14 14)" fill="#FF8AB8"/>
+                    <ellipse cx="14" cy="14" rx="9" ry="12" transform="rotate(-45 14 14)" fill="#FF8AB8"/>
+                  </g>
+                  <circle r="9" fill="#FFD84D"/>
+                </g>
+              </g>
+            </g>
+            <path d="M24 186 H96 L88 218 H32 Z" fill="#fff"/>
+            <path d="M24 186 H96 L93 198 H27 Z" fill="#FF8AB8"/>
+            <rect x="20" y="180" width="80" height="10" rx="4" fill="#FF3D80"/>
+          </svg>
+        </div>
+
+        <!-- watering can -->
+        <div class="item can drag tap" data-action="can" style="--r:0deg;" aria-label="Watering can: drag it over the plant and hold">
+          <svg viewBox="0 0 92 70" aria-hidden="true">
+            <path d="M18 24 H66 L62 64 H22 Z" fill="#FF3D80"/>
+            <path d="M66 32 L90 14 L90 22 L66 44 Z" fill="#E6E8EC"/>
+            <path d="M22 24 C 22 8, 62 8, 62 24" stroke="#E6E8EC" stroke-width="5" fill="none"/>
+            <rect x="14" y="22" width="56" height="7" rx="3" fill="#FF8AB8"/>
+            <path d="M42 56 l-6 -7 a4 4 0 0 1 6 -4 a4 4 0 0 1 6 4 z" fill="#fff"/>
+          </svg>
+        </div>
+
+        <!-- mug -->
+        <div class="item mug drag tap" data-action="mug" style="--r:0deg;">
+          <span class="steam s1"></span><span class="steam s2"></span><span class="steam s3"></span>
+          <div class="mug-body"><span>♥</span></div>
+          <div class="mug-handle"></div>
+        </div>
+
+        <!-- laptop: the main object -->
+        <div class="laptop" id="laptop">
+          <div class="laptop-lid">
+            <div class="laptop-screen">
+              <div class="os-bar"><span>hanna.os</span><span data-clock>00:00</span></div>
+              <div class="os-main">
+                <p class="os-eyebrow">hello, I'm</p>
+                <h1>Hanna<br>Magnusson</h1>
+                <p class="os-sub">Master’s student in computer science. Curious and creative.</p>
+                <span class="os-badge">open to jobs &amp; internships</span>
+                <p class="os-type" id="osType">&gt; <span id="osTypeText"></span><span class="caret"></span></p>
+              </div>
+              <div class="os-actions">
+                <a class="os-btn primary" href="portfolio.html">Open portfolio →</a>
+                <a class="os-btn" href="contact.html">Send me a mail</a>
+              </div>
+              <div class="os-dock">
+                <a class="os-icon" href="portfolio.html" aria-label="Portfolio">
+                  <span><svg viewBox="0 0 24 24" width="60%" height="60%" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></span>Portfolio
+                </a>
+                <a class="os-icon" href="contact.html" aria-label="Contact by mail">
+                  <span><svg viewBox="0 0 24 24" width="60%" height="60%" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span>Mail
+                </a>
+                <a class="os-icon" href="https://www.linkedin.com/in/hanna-magnusson-28787324a" target="_blank" rel="noopener" aria-label="LinkedIn">
+                  <span><svg viewBox="0 0 24 24" width="55%" height="55%" fill="currentColor"><path d="M4.5 9h3.8v11H4.5zM6.4 3.5a2.2 2.2 0 1 1 0 4.4 2.2 2.2 0 0 1 0-4.4zM10.5 9h3.6v1.6c.6-1 1.9-1.9 3.8-1.9 3.6 0 4.1 2.4 4.1 5.4V20h-3.8v-5.2c0-1.3 0-2.9-1.8-2.9s-2 1.4-2 2.8V20h-3.8z"/></svg></span>LinkedIn
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="laptop-base"></div>
+        </div>
+
+        <!-- notebook: About -->
+        <a href="about.html" class="notebook" aria-label="About me and competences">
+          <span class="notebook-label">About &amp; competences<small>open the notebook →</small></span>
+        </a>
+
+        <p class="desk-hint">click the laptop for my work · the notebook for about &amp; competences · water the plant · move the rest around</p>
+      </div>
+      <div class="desk-dim" aria-hidden="true"></div>
+    </div>
+  </section>
+
+  <!-- ============ STICKER SHEET ============ -->
+  <section class="sticker-section">
+    <div class="wrap">
+      <div class="route-head">
+        <span class="eyebrow">toolkit</span>
+        <h2>Sticker sheet</h2>
+        <p>Move them around.</p>
+      </div>
+      <div class="sticker-sheet" id="stickerSheet">
+        <span class="skill-sticker drag pk" style="left:4%; top:12%; --r:-4deg;">Python</span>
+        <span class="skill-sticker drag sv" style="left:22%; top:46%; --r:3deg;">Java</span>
+        <span class="skill-sticker drag gr" style="left:38%; top:10%; --r:-2deg;">React</span>
+        <span class="skill-sticker drag pk" style="left:56%; top:50%; --r:5deg;">SQL</span>
+        <span class="skill-sticker drag vi" style="left:70%; top:12%; --r:-6deg;">CI/CD</span>
+        <span class="skill-sticker drag sv" style="left:8%; top:68%; --r:2deg;">Haskell</span>
+        <span class="skill-sticker drag gr" style="left:40%; top:72%; --r:-3deg;">Git</span>
+        <span class="skill-sticker drag pk" style="left:76%; top:62%; --r:4deg;">AI &amp; ML</span>
+        <span class="skill-sticker drag vi" style="left:58%; top:24%; --r:-2deg;">Godot</span>
+        <span class="skill-sticker drag sv" style="left:24%; top:22%; --r:6deg;">UX ✦</span>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>© 2026 Hanna Magnusson</p>
+    <div class="footer-links">
+      <a href="https://www.linkedin.com/in/hanna-magnusson-28787324a" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="mailto:hanna012008@hotmail.com">Email</a>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+<script src="desk.js"></script>
+</body>
+</html>
